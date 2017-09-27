@@ -32,5 +32,8 @@ package { 'vim':
     ensure => present,
   }
   
+  package { 'lynx':
+	ensure => present,
+  }
 
 }
