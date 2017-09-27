@@ -5,6 +5,7 @@ class task_1 {
 	uid => '10012192',
 	shell => '/bin/bash',
 	home => '/home/becca',
+	managehome => true,
     groups => ['sysadmin', 'cars'],
 	password => '$1$jIDkfAD0$MDhM1jOKoNTGtZ.wvfgHg1'
   }
@@ -14,6 +15,7 @@ class task_1 {
 	uid => '10022192',
 	shell => '/bin/csh',
 	home => '/home/fred',
+	managehome => true,
     groups => ['trucks', 'cars'],
 	password => '$1$Ahm3rJpS$0KpZkIe/rALAa5KJtAP9K/'
   }
@@ -22,6 +24,7 @@ class task_1 {
     ensure => present,
 	uid => '10032192',
 	home => '/home/wilma',
+	managehome => true,
     groups => ['trucks', 'cars', 'ambulances'],
 	password => '$1$XqCLK6uT$6lybz7Kc5bYGyjcZihYU50'
   }
