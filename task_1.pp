@@ -6,7 +6,7 @@ class task_1 {
 	shell => '/bin/bash',
 	home => '/home/becca',
     groups => ['sysadmin', 'cars'],
-	password => '$1$B8nO52/W$rYEDv8OdwXsPV1HJyBaqL'
+	password => '$1$jIDkfAD0$MDhM1jOKoNTGtZ.wvfgHg1'
   }
   
   user { 'fred':
@@ -15,7 +15,7 @@ class task_1 {
 	shell => '/bin/csh',
 	home => '/home/fred',
     groups => ['trucks', 'cars'],
-	password => '$1$BkNjh/g7$5mUVroTxa1CWOR3Tl2Ti4'
+	password => '$1$Ahm3rJpS$0KpZkIe/rALAa5KJtAP9K/'
   }
 
   user { 'wilma':
