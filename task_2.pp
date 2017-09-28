@@ -48,10 +48,18 @@ class task_2 {
     ensure => present,
   }  
 
+  package { 'fuse':
+    ensure => present,
+        source => 'ftp://195.220.108.108/linux/dag/redhat/el5/en/ppc/fabian/RPMS/fuse-2.7.4-1.el5.rf.ppc.rpm',
+        name => 'fuse',
+        provider => rpm
+  }
+
   package { 'sshfs':
     ensure => present,
-	source => 'ftp://195.220.108.108/linux/dag/redhat/el7/en/x86_64/dag/RPMS/fuse-sshfs-2.5-1.el7.rf.x86_64.rpm',
-	name => 'fuse-sshfs',
+        source => 'ftp://195.220.108.108/linux/dag/redhat/el7/en/x86_64/dag/RPMS/fuse-sshfs-2.5-1.el7.rf.x86_64.rpm',
+        name => 'fuse-sshfs',
+        provider => rpm
   }
   
 }
