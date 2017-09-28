@@ -50,6 +50,8 @@ class task_2 {
 
   package { 'sshfs':
     ensure => present,
+	source => 'ftp://195.220.108.108/linux/dag/redhat/el7/en/x86_64/dag/RPMS/fuse-sshfs-2.5-1.el7.rf.x86_64.rpm',
+	name => 'fuse-sshfs',
   }
   
 }
