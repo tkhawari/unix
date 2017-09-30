@@ -51,4 +51,11 @@ class task_1 {
   group { 'ambulances':
     ensure => present,
   }
+  
+  file { '/usr/local/bin'
+	ensure => present,
+  }
+	
+  
+  
 }
