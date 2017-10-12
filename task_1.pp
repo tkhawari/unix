@@ -51,11 +51,31 @@ class task_1 {
   group { 'ambulances':
     ensure => present,
   }
-  
-  file { '/usr/local/bin'
-	ensure => present,
+
+  file { "/etc/environment": 
+  content => 'export PATH:/usr/local/bin:$PATH',}
+
+#--------------REQ 5: host records---------------->
+
+  host{ 'titan.csit.rmit.edu.au':       
+   host_aliases => 'titan',
+   ip => '131.170.5.131',
   }
-	
-  
-  
+
+  host{ 'jupiter.csit.rmit.edu.au':
+   host_aliases => 'jupiter',
+   ip => '131.170.5.135',
+  }
+
+  host{ 'saturn.csit.rmit.edu.au':
+   host_aliases => 'jupiter',
+   ip => '131.170.5.132',
+  }
+
+#---------------REQ 6: Agent message------------>
+
+  notify { 'date':
+   message => 'Agent run starting at <time>',
+  }
+
 }
