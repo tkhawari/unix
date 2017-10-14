@@ -1,4 +1,10 @@
-just a text file
+____________________________________________________________________________________________________________________________
+|Unix System Administration: Assignment 2										    |
+| TAIMUR HYDER KHAWARI													    | 
+| s3422192														    |
+| This readMe file contains logs that I wrote everytime I updated puppet manifests, or any other changes. 		    |
+| It might really not that important but it shows that all work has been done by myself since 12/09/17 (earliest start date)|
+|___________________________________________________________________________________________________________________________|
 
 12/09/17 4pm - Testing git account from ec2 instance
 
