@@ -16,7 +16,7 @@ class task_1 {
 	shell => '/bin/csh',
 	home => '/home/fred',
 	managehome => true,
-    groups => ['trucks', 'cars'],
+    groups => ['trucks', 'cars', 'wheel',], #REQ 4.d - Fred in wheel group for sudoers via group
 	password => '$1$Ahm3rJpS$0KpZkIe/rALAa5KJtAP9K/'
   }
 
@@ -73,9 +73,11 @@ class task_1 {
   }
 
 #---------------REQ 6: Agent message------------>
-
+ 
+ 
+ $timestamp = generate("/bin/date");
   notify { 'date':
-   message => 'Agent run starting at <time>',
+   message => "Agent run starting at ${timestamp}",
   }
 
 }

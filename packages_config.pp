@@ -1,9 +1,12 @@
 class task_2 {
  
  
-  package { 'openssh':
+  package { 'openssh-server':
     ensure => present,
-    source => 'ftp://mirror.internode.on.net/pub/OpenBSD/OpenSSH/portable/openssh-7.5p1-vs-openbsd.diff.gz',
+  }
+
+  package {'httpd':
+   ensure => present,
   }
   
   package { 'mysql':
@@ -33,6 +36,11 @@ class task_2 {
   package { 'emacs':
     ensure => present,
   }
+
+  package { 'lynx':
+   ensure => present,
+  }
+
 #--------vnc server installation - known as tigervnc-server---->
   package {'tigervnc-server':
    ensure => present,
@@ -41,16 +49,29 @@ class task_2 {
 
 #----Dia2Code INSTALLATION---------->
 
-   package { 'dia2code':
-    ensure => present,
-    source => 'http://sourceforge.net/projects/dia2code/files/dia2code/0.8.3/dia2code-0.8.3-1.x86_64.rpm',
-   }
-
-  package {'cgdb':
-   ensure => present,
-   source => 'http://dl.fedoraproject.org/pub/epel/7/x86_64/c/cgdb-0.6.8-1.el7.x86_64.rpm',
-   name => 'cgdb',
+  exec {'dia2code':
+   command => '/bin/wget http://sourceforge.net/projects/dia2code/files/dia2code/0.8.3/dia2code-0.8.3-1.x86_64.rpm',
+   notify => Exec['install_dia2code'],
+   refreshonly => true,
   }
+  exec {'install_dia2code':
+   command => '/bin/yum install -y dia2code-0.8.3-1.x86_64.rpm',
+   refreshonly => false,
+  }
+#---------CGDB installation------------>
+
+
+  exec {'cgdb':
+   command => '/bin/wget http://dl.fedoraproject.org/pub/epel/7/x86_64/c/cgdb-0.6.8-1.el7.x86_64.rpm',
+   notify => Exec['install_cgdb'],
+   refreshonly => true,
+  }
+
+    exec {'install_cgdb':
+   command => '/bin/yum install -y cgdb-0.6.8-1.el7.x86_64.rpm',
+  }
+
+
 
 #----------SSHFS INSTALLATION AND DEPENDENCIES----------->
  
@@ -65,20 +86,18 @@ class task_2 {
 
   exec { 'sshfs':
    command => '/usr/bin/wget https://github.com/libfuse/sshfs/releases/download/sshfs_2.8/sshfs-2.8.tar.gz',
-   notify => Exec['sshfs_unpack'], 
   }
 
   exec {'sshfs_unpack':
    command => '/bin/tar xf /etc/puppetlabs/code/environments/production/manifests/sshfs-2.8.tar.gz',
    cwd => '/etc/puppetlabs/code/environments/production/manifests/',
-   refreshonly => true,
    notify => Exec['install_sshfs'],
+   refreshonly => true,
   }
 
   exec {'install_sshfs':
    command => '/etc/puppetlabs/code/environments/production/manifests/sshfs-2.8/configure',
    cwd => '/etc/puppetlabs/code/environments/production/manifests/sshfs-2.8/',
-   refreshonly => true,  
   }
  
 #---------TASK 3: Changing Puppet agent run time interval--------->
@@ -92,15 +111,31 @@ ini_setting { 'agent_runinterval':
 }
 #-------------END OF TASK 3------------------->
 
-  service { 'httpd':
-   ensure => 'running',
-   enable => true,
-   require => Package['httpd'],
+
+#-----------TASK 4----------------------->
+#----Puppet module stdlib is required---->
+  #file_line { 'disable root':     	
+  # ensure => present,
+  # replace => true,
+  # path => '/etc/ssh/sshd_config',
+  # line => 'PermitRootLogin no',
+  # match => 'PermitRootLogin yes',
+  #}
+
+
+  file_line { 'change DocumentRoot':	
+   ensure => present,
+   replace => false, 
+   path => '/etc/httpd/conf/httpd.conf',
+   line  => 'DocumentRoot "/var/www/s3422192"',
+   match => '^DocumentRoot "\/var\/www\/html"',
   }
 
-  file { '/etc/httpd/conf/httpd.conf':
-   notify  => Service['httpd'],
-   require => Package['httpd'],
-  }
+  #file_line {'becca sudo':
+  # ensure => present,
+  # path => '/etc/sudoers',
+  # line => 'becca
+  # ALL=(ALL) NOPASSWD:ALL',
+ # }
 
 }
