@@ -12,6 +12,7 @@ Details:
  security group: TCP ports added-22, 3000, 443, 80.
 -----------------------------------------------------
 
+
 23/09/17 3:50 - Puppt installed successfully.
 
 Details:
@@ -20,4 +21,13 @@ Details:
  Sucessful login via admin
 --------------------------------------------------------------------------
 
+
+29/09/17 12:00 - Updated packages with further assignment requirements
+
+--------------------------------------------------------------------------
+
+10/14/2017 11:30 - Implemented TASK: 4, 5, 6, 7, 8.
+
+	note: Task 4.f and 8 partially remaining
+-------------------------------------------------------------------------
 
