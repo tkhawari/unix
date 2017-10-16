@@ -1,0 +1,150 @@
+commit 8d11f3cf2a6cc55d61f85d6c75836380d8f981d7
+Author: Cloud User <ec2-user@ip-172-31-16-175.us-west-2.compute.internal>
+Date:   Mon Oct 16 05:00:19 2017 +0000
+
+    finalised all requirments, updated readme
+
+commit 1d9bfba7b570b3baf3e1e83c635b71e805378dbb
+Author: Cloud User <ec2-user@ip-172-31-16-175.us-west-2.compute.internal>
+Date:   Sun Oct 15 12:24:54 2017 +0000
+
+    updated readme file
+
+commit 4310a56e3ca2fca0f245f52a7663c63a2d044720
+Author: Cloud User <ec2-user@ip-172-31-16-175.us-west-2.compute.internal>
+Date:   Sun Oct 15 12:21:41 2017 +0000
+
+    removed test text files. Updated user config file with further requirements. Updated config file with further requirements
+
+commit c23575d986679a0a191efe26fbdd1738472fbb89
+Author: Cloud User <ec2-user@ip-172-31-16-175.us-west-2.compute.internal>
+Date:   Thu Oct 12 02:03:10 2017 +0000
+
+    renaming files. Removed temporary versioned file puppet_code_v1
+
+commit 908848db2da2f2a1f7622d61c0803aa72ae714ac
+Author: Cloud User <ec2-user@ip-172-31-16-175.us-west-2.compute.internal>
+Date:   Thu Oct 12 01:07:01 2017 +0000
+
+    completed packages requirement.
+
+commit d80b594db94cd022050bd3de2a70954eb3954bc2
+Author:  <tkhawari@DESKTOP-F04J1E2.localdomain>
+Date:   Thu Oct 5 20:14:07 2017 +1100
+
+    just a test
+
+commit 343054c54392f4188ce6b1e7b13da520b6f1ba4e
+Author:  <tkhawari@DESKTOP-F04J1E2.localdomain>
+Date:   Sun Oct 1 00:19:08 2017 +1000
+
+    requirement #7 written
+
+commit ab9eda6606246a074804a85c8f480c5848f8ea28
+Author:  <tkhawari@DESKTOP-F04J1E2.localdomain>
+Date:   Thu Sep 28 21:34:14 2017 +1000
+
+    installed dependences for sshfs
+
+commit 306d0749e8a60e8957bd0102d0f61a9033304f22
+Author:  <tkhawari@DESKTOP-F04J1E2.localdomain>
+Date:   Thu Sep 28 19:45:02 2017 +1000
+
+    testing external source for installation of package 'sshfs'
+
+commit 578fa26385e66086ca88cc57ab87bf079f3c31b4
+Author:  <tkhawari@DESKTOP-F04J1E2.localdomain>
+Date:   Wed Sep 27 16:37:15 2017 +1000
+
+    added remaining assignment required packages for task 2
+
+commit 5cff4d84f5e4daf74fc34813abb6b9907c7e78b4
+Author:  <tkhawari@DESKTOP-F04J1E2.localdomain>
+Date:   Wed Sep 27 15:02:56 2017 +1000
+
+    fixed issue where user's home directory wasn't being created
+
+commit 39c4bf9f4fa619098f6bf610120c4cc013b35a92
+Author:  <tkhawari@DESKTOP-F04J1E2.localdomain>
+Date:   Wed Sep 27 14:57:25 2017 +1000
+
+    fixed user fred and becca password hash problem by creating new hashes
+
+commit 9eeb15748ed5cfc33921db487e97def8c93175d4
+Author:  <tkhawari@DESKTOP-F04J1E2.localdomain>
+Date:   Wed Sep 27 14:20:43 2017 +1000
+
+    fixed password hash typo errors
+
+commit 7232a8e085bffbe0706cd88579dd018a11440acb
+Author: Cloud User <ec2-user@ip-172-31-16-175.us-west-2.compute.internal>
+Date:   Wed Sep 27 03:44:11 2017 +0000
+
+    fixed missing '}'
+
+commit 375937c755f7976b695b706868976ba44398f3aa
+Author:  <tkhawari@DESKTOP-F04J1E2.localdomain>
+Date:   Wed Sep 27 13:20:01 2017 +1000
+
+    added more packages to task 2
+
+commit 759ccd80ffaad6dc8b81609c48532c1ad9cb8a73
+Author:  <tkhawari@DESKTOP-F04J1E2.localdomain>
+Date:   Wed Sep 27 02:29:34 2017 +1000
+
+    added task 2 file and fixed typo in task 1 file
+
+commit c7b538af1b462ecf4fc512d187c1493eeec2fe95
+Author: Cloud User <ec2-user@ip-172-31-16-175.us-west-2.compute.internal>
+Date:   Tue Sep 26 15:49:11 2017 +0000
+
+    created separate puppet Manifest for task 1
+
+commit 60e10615440a241d721a6646b5d9fd8469b13fa8
+Author: Cloud User <ec2-user@ip-172-31-16-175.us-west-2.compute.internal>
+Date:   Tue Sep 26 15:44:14 2017 +0000
+
+    created version 1 puppet code for users and groups
+
+commit 8168e57eda2fd372da6d7f46ea3bbecdfcf71f66
+Author: Cloud User <ec2-user@ip-172-31-16-175.us-west-2.compute.internal>
+Date:   Sat Sep 23 05:55:15 2017 +0000
+
+    updated log for all installations
+
+commit 813143c0b5363f56443cab777cf12fb431a6a204
+Author: taimur khawari <s3422192@csitprdap03.int.its.rmit.edu.au>
+Date:   Sat Sep 23 15:46:41 2017 +1000
+
+    confirmation of successful connection to remote repo TITAN RMIT
+
+commit 42f204f58ba91b0177b351cbaaac9b24565a7672
+Author: Cloud User <ec2-user@ip-172-31-16-175.us-west-2.compute.internal>
+Date:   Sat Sep 23 05:44:03 2017 +0000
+
+    testing git with remote repo establishment
+
+commit 3c1a016e63567e4adf59a7dd004818a00c3539c8
+Merge: c1838dc e0c9f5b
+Author: Cloud User <ec2-user@ip-172-31-6-68.us-west-2.compute.internal>
+Date:   Tue Sep 12 07:10:44 2017 +0000
+
+    fixed the conflicting files
+
+commit e0c9f5b79b394806954b0e44b4a7c17d759a7a18
+Author: taimur khawari <s3422192@csitprdap03.int.its.rmit.edu.au>
+Date:   Tue Sep 12 16:56:37 2017 +1000
+
+    adding a text file and testing git account
+
+commit c1838dc8f623993ffdba881a355d26a0aeda1667
+Author: Cloud User <ec2-user@ip-172-31-6-68.us-west-2.compute.internal>
+Date:   Tue Sep 12 06:27:25 2017 +0000
+
+    testing the connected git account
+
+commit 980e853018b0cfe3c053d840becd5024305ac1b0
+Author: tkhawari <taimurhaider111@hotmail.com>
+Date:   Wed Aug 9 12:01:25 2017 +1000
+
+    added readme file
