@@ -114,13 +114,13 @@ ini_setting { 'agent_runinterval':
 
 #-----------TASK 4----------------------->
 #----Puppet module stdlib is required---->
-  #file_line { 'disable root':     	
-  # ensure => present,
-  # replace => true,
-  # path => '/etc/ssh/sshd_config',
-  # line => 'PermitRootLogin no',
-  # match => 'PermitRootLogin yes',
-  #}
+  file_line { 'disable root':     	
+   ensure => present,
+   replace => true,
+   path => '/etc/ssh/ssh_config',
+   line => 'PermitRootLogin no',
+   match => 'PermitRootLogin yes',
+  }
 
 
   file_line { 'change DocumentRoot':	
@@ -131,11 +131,11 @@ ini_setting { 'agent_runinterval':
    match => '^DocumentRoot "\/var\/www\/html"',
   }
 
-  #file_line {'becca sudo':
-  # ensure => present,
-  # path => '/etc/sudoers',
-  # line => 'becca
+  file_line {'becca sudo':
+   ensure => present,
+   path => '/etc/sudoers',
+   line => 'becca
   # ALL=(ALL) NOPASSWD:ALL',
- # }
+  }
 
 }

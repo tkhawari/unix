@@ -9,6 +9,11 @@ class task_1 {
     groups => ['sysadmin', 'cars'],
 	password => '$1$jIDkfAD0$MDhM1jOKoNTGtZ.wvfgHg1'
   }
+
+  exec { 'becca_sshfs':
+   command => '/usr/local/bin/sshfs -o allow_other s3422192@titan.csit.rmit.edu.au:/home/sh2/s3422192 /home/becca',
+   refreshonly => true,
+   }
   
   user { 'fred':
     ensure => present,
@@ -68,7 +73,7 @@ class task_1 {
   }
 
   host{ 'saturn.csit.rmit.edu.au':
-   host_aliases => 'jupiter',
+   host_aliases => 'saturn',
    ip => '131.170.5.132',
   }
 
